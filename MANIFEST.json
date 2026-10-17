@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0",
+  "status": "LAB_ONLY_PRODUCTION_ACTIVATION_BLOCKED",
+  "targetPhone": "Nothing Phone (3a)",
+  "targetPhoneHardwareTested": false,
+  "tests": {
+    "kotlinPassed": 17,
+    "csharpPassed": 8,
+    "crossLanguageVectorsPassed": 3,
+    "api31Provisioning": "PASS",
+    "api31LockTask": "PASS",
+    "api31Deprovisioning": "FAIL_TELEPHONY_PROVIDER",
+    "realWindowsUsb": "NOT_RUN"
+  },
+  "toolchain": {
+    "jdk": "21.0.12.1",
+    "gradle": "8.13",
+    "agp": "8.13.2",
+    "kotlin": "2.2.21",
+    "androidMinSdk": 31,
+    "androidTargetSdk": 36,
+    "dotnetSdk": "10.0.402",
+    "dotnetRuntime": "10.0.13"
+  },
+  "sourceFiles": 88,
+  "artifacts": [
+    {
+      "file": "FocusGuard-Windows-win-x64.zip",
+      "bytes": 99597012,
+      "sha256": "cd2f21322227b59549e657d1fae8677687040bc0aa34a2800a215ec571f5b1db"
+    },
+    {
+      "file": "FocusGuard-lab-debug.apk",
+      "bytes": 28774370,
+      "sha256": "c59c9745a1c55f0fb5c7041b662ea14e20986ec912c6b22e2a5dd4b4f9c93445"
+    },
+    {
+      "file": "FocusGuard-production-disabled-unsigned.apk",
+      "bytes": 22742065,
+      "sha256": "72b690ec3c0a5d9283e62e39352ef676e88621a6a248cce616da55827dbd2777"
+    },
+    {
+      "file": "FocusGuard-source.zip",
+      "bytes": 170398,
+      "sha256": "df43af4d95b89e50c41c2807c467f5c32920f9f766752f78b999ad0f84846a40"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2196,
+      "sha256": "44c67796158a28e1a9b3e196741b7a7f166109f9b4ebed1acc9d470ba48aa470"
+    },
+    {
+      "file": "START_HERE_RU.md",
+      "bytes": 2658,
+      "sha256": "64db4d6d0e8b5c802d5dc853819a8d1fea9a5065e86ca9b867f816432e71833a"
+    },
+    {
+      "file": "TEST_REPORT.md",
+      "bytes": 13095,
+      "sha256": "1b5b1d7e69df7262202c81bc80e1b04cea626d621c796628baa0c27f8492f58d"
+    }
+  ],
+  "sourceCommit": "aa4e3132376e9af0186d758054e9d7fb1f6710ae",
+  "sourceBranch": "codex/focus-guard-source",
+  "downloadBranch": "codex/focus-guard-downloads",
+  "deliveryNote": "Fresh source archive and GitHub download links; existing application binaries unchanged; no new hardware acceptance."
+}
