@@ -1,0 +1,2 @@
+# focus-guard
+stay focused
