@@ -1,0 +1,53 @@
+Connected to disposable API31 emulator
+BOOT_COMPLETED
+Already installed app-lab-debug.apk
+Pushing app-lab-debug-androidTest.apk
+Success
+
+Success: Device owner set to package ru.focusguard.android.lab/ru.focusguard.android.AdminReceiver
+Active admin set to component ru.focusguard.android.lab/ru.focusguard.android.AdminReceiver
+
+INSTRUMENTATION_STATUS: class=ru.focusguard.android.ProvisioningSmokeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+ru.focusguard.android.ProvisioningSmokeTest:
+INSTRUMENTATION_STATUS: test=minimalLockTaskAndNoWipeDeprovision
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ru.focusguard.android.ProvisioningSmokeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.RuntimeException: Could not launch intent Intent { flg=0x14000000 cmp=ru.focusguard.android.lab/ru.focusguard.android.MainActivity } within 45000 milliseconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1792243418619 and now the last time the queue went idle was: 1792243418619. If these numbers are the same your activity might be hogging the event queue.
+	at androidx.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:537)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:31)
+
+INSTRUMENTATION_STATUS: stream=
+Error in minimalLockTaskAndNoWipeDeprovision(ru.focusguard.android.ProvisioningSmokeTest):
+java.lang.RuntimeException: Could not launch intent Intent { flg=0x14000000 cmp=ru.focusguard.android.lab/ru.focusguard.android.MainActivity } within 45000 milliseconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1792243418619 and now the last time the queue went idle was: 1792243418619. If these numbers are the same your activity might be hogging the event queue.
+	at androidx.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:537)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:31)
+
+INSTRUMENTATION_STATUS: test=minimalLockTaskAndNoWipeDeprovision
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 49.867
+There was 1 failure:
+1) minimalLockTaskAndNoWipeDeprovision(ru.focusguard.android.ProvisioningSmokeTest)
+java.lang.RuntimeException: Could not launch intent Intent { flg=0x14000000 cmp=ru.focusguard.android.lab/ru.focusguard.android.MainActivity } within 45000 milliseconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1792243418619 and now the last time the queue went idle was: 1792243418619. If these numbers are the same your activity might be hogging the event queue.
+	at androidx.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:537)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:31)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1
+
+Traceback (most recent call last):
+  File "/workspace/work/emulator_smoke.py", line 23, in <module>
+    assert 'OK (1 test)' in out and 'FAILURES' not in out
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

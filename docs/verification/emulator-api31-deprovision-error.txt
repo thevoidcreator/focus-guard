@@ -1,0 +1,107 @@
+Connected to disposable API31 emulator
+BOOT_COMPLETED
+Pushing app-lab-debug.apk
+Success
+
+Pushing app-lab-debug-androidTest.apk
+Success
+
+Existing lab Device Owner on disposable emulator
+INSTRUMENTATION_STATUS: class=ru.focusguard.android.ProvisioningSmokeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+ru.focusguard.android.ProvisioningSmokeTest:
+INSTRUMENTATION_STATUS: test=minimalLockTaskAndNoWipeDeprovision
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ru.focusguard.android.ProvisioningSmokeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Unknown URI content://telephony/carriers/enforce_managed
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:2430)
+	at android.os.Parcel.createException(Parcel.java:2410)
+	at android.os.Parcel.readException(Parcel.java:2393)
+	at android.os.Parcel.readException(Parcel.java:2335)
+	at android.app.admin.IDevicePolicyManager$Stub$Proxy.clearDeviceOwner(IDevicePolicyManager.java:9228)
+	at android.app.admin.DevicePolicyManager.clearDeviceOwnerApp(DevicePolicyManager.java:7924)
+	at ru.focusguard.android.PolicyController.deprovision$lambda$5(PolicyController.kt:101)
+	at ru.focusguard.android.PolicyController.$r8$lambda$AMy4raeF8BflGR3xUfO8WPMFMNA(Unknown Source:0)
+	at ru.focusguard.android.PolicyController$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at ru.focusguard.android.PolicyController.deprovision$stage(PolicyController.kt:88)
+	at ru.focusguard.android.PolicyController.deprovision(PolicyController.kt:101)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:43)
+	... 32 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at android.content.ContentResolver.update(ContentResolver.java:2396)
+	at android.content.ContentResolver.update(ContentResolver.java:2362)
+	at com.android.server.devicepolicy.DevicePolicyManagerService.lambda$setOverrideApnsEnabledUnchecked$122$DevicePolicyManagerService(DevicePolicyManagerService.java:15890)
+	at com.android.server.devicepolicy.DevicePolicyManagerService$$ExternalSyntheticLambda87.getOrThrow(Unknown Source:4)
+	at android.os.Binder.withCleanCallingIdentity(Binder.java:414)
+
+
+INSTRUMENTATION_STATUS: stream=
+Error in minimalLockTaskAndNoWipeDeprovision(ru.focusguard.android.ProvisioningSmokeTest):
+java.lang.IllegalArgumentException: Unknown URI content://telephony/carriers/enforce_managed
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:2430)
+	at android.os.Parcel.createException(Parcel.java:2410)
+	at android.os.Parcel.readException(Parcel.java:2393)
+	at android.os.Parcel.readException(Parcel.java:2335)
+	at android.app.admin.IDevicePolicyManager$Stub$Proxy.clearDeviceOwner(IDevicePolicyManager.java:9228)
+	at android.app.admin.DevicePolicyManager.clearDeviceOwnerApp(DevicePolicyManager.java:7924)
+	at ru.focusguard.android.PolicyController.deprovision$lambda$5(PolicyController.kt:101)
+	at ru.focusguard.android.PolicyController.$r8$lambda$AMy4raeF8BflGR3xUfO8WPMFMNA(Unknown Source:0)
+	at ru.focusguard.android.PolicyController$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at ru.focusguard.android.PolicyController.deprovision$stage(PolicyController.kt:88)
+	at ru.focusguard.android.PolicyController.deprovision(PolicyController.kt:101)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:43)
+	... 32 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at android.content.ContentResolver.update(ContentResolver.java:2396)
+	at android.content.ContentResolver.update(ContentResolver.java:2362)
+	at com.android.server.devicepolicy.DevicePolicyManagerService.lambda$setOverrideApnsEnabledUnchecked$122$DevicePolicyManagerService(DevicePolicyManagerService.java:15890)
+	at com.android.server.devicepolicy.DevicePolicyManagerService$$ExternalSyntheticLambda87.getOrThrow(Unknown Source:4)
+	at android.os.Binder.withCleanCallingIdentity(Binder.java:414)
+
+
+INSTRUMENTATION_STATUS: test=minimalLockTaskAndNoWipeDeprovision
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 44.18
+There was 1 failure:
+1) minimalLockTaskAndNoWipeDeprovision(ru.focusguard.android.ProvisioningSmokeTest)
+java.lang.IllegalArgumentException: Unknown URI content://telephony/carriers/enforce_managed
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:2430)
+	at android.os.Parcel.createException(Parcel.java:2410)
+	at android.os.Parcel.readException(Parcel.java:2393)
+	at android.os.Parcel.readException(Parcel.java:2335)
+	at android.app.admin.IDevicePolicyManager$Stub$Proxy.clearDeviceOwner(IDevicePolicyManager.java:9228)
+	at android.app.admin.DevicePolicyManager.clearDeviceOwnerApp(DevicePolicyManager.java:7924)
+	at ru.focusguard.android.PolicyController.deprovision$lambda$5(PolicyController.kt:101)
+	at ru.focusguard.android.PolicyController.$r8$lambda$AMy4raeF8BflGR3xUfO8WPMFMNA(Unknown Source:0)
+	at ru.focusguard.android.PolicyController$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at ru.focusguard.android.PolicyController.deprovision$stage(PolicyController.kt:88)
+	at ru.focusguard.android.PolicyController.deprovision(PolicyController.kt:101)
+	at ru.focusguard.android.ProvisioningSmokeTest.minimalLockTaskAndNoWipeDeprovision(ProvisioningSmokeTest.kt:43)
+	... 32 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at android.content.ContentResolver.update(ContentResolver.java:2396)
+	at android.content.ContentResolver.update(ContentResolver.java:2362)
+	at com.android.server.devicepolicy.DevicePolicyManagerService.lambda$setOverrideApnsEnabledUnchecked$122$DevicePolicyManagerService(DevicePolicyManagerService.java:15890)
+	at com.android.server.devicepolicy.DevicePolicyManagerService$$ExternalSyntheticLambda87.getOrThrow(Unknown Source:4)
+	at android.os.Binder.withCleanCallingIdentity(Binder.java:414)
+
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1
+
+Traceback (most recent call last):
+  File "/workspace/work/emulator_smoke_v2.py", line 29, in <module>
+    assert 'OK (1 test)' in out and 'FAILURES' not in out
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,24 @@
+**/build/
+**/bin/
+**/obj/
+**/TestResults/
+.gradle/
+android/local.properties
+dist/
+*.user
+*.p12
+*.pfx
+*.key
+*.pem
+work/
+
+# Local credentials, signing material and IDE state
+.env
+.env.*
+*.jks
+*.keystore
+*.pk8
+id_rsa
+id_ed25519
+.idea/
+.kotlin/

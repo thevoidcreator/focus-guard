@@ -1,0 +1,5 @@
+TEST-ONLY EMULATOR CLEANUP; not application deprovisioning proof
+Sentinel before cleanup: must survive deprovision
+Success: Admin removed ComponentInfo{ru.focusguard.android.lab/ru.focusguard.android.AdminReceiver}
+Device Owner marker present: False
+Lab admin entry present: False

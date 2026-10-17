@@ -1,0 +1,187 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
+
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin UP-TO-DATE
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :core:compileTestKotlin UP-TO-DATE
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:processTestResources NO-SOURCE
+> Task :core:testClasses UP-TO-DATE
+> Task :core:test UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preLabDebugBuild UP-TO-DATE
+> Task :app:mergeLabDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateLabDebugBuildConfig UP-TO-DATE
+> Task :app:checkLabDebugAarMetadata UP-TO-DATE
+> Task :app:processLabDebugNavigationResources UP-TO-DATE
+> Task :app:compileLabDebugNavigationResources UP-TO-DATE
+> Task :app:generateLabDebugResValues UP-TO-DATE
+> Task :app:mapLabDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateLabDebugResources UP-TO-DATE
+> Task :app:mergeLabDebugResources UP-TO-DATE
+> Task :app:packageLabDebugResources UP-TO-DATE
+> Task :app:parseLabDebugLocalResources UP-TO-DATE
+> Task :app:createLabDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksLabDebug UP-TO-DATE
+> Task :app:processLabDebugMainManifest UP-TO-DATE
+> Task :app:processLabDebugManifest UP-TO-DATE
+> Task :app:processLabDebugManifestForPackage UP-TO-DATE
+> Task :app:processLabDebugResources UP-TO-DATE
+> Task :app:javaPreCompileLabDebug UP-TO-DATE
+> Task :app:mergeLabDebugShaders UP-TO-DATE
+> Task :app:compileLabDebugShaders NO-SOURCE
+> Task :app:generateLabDebugAssets UP-TO-DATE
+> Task :app:mergeLabDebugAssets UP-TO-DATE
+> Task :app:compressLabDebugAssets UP-TO-DATE
+> Task :app:l8DexDesugarLibLabDebug UP-TO-DATE
+> Task :app:checkLabDebugDuplicateClasses UP-TO-DATE
+> Task :app:desugarLabDebugFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexLabDebug UP-TO-DATE
+> Task :app:mergeLibDexLabDebug UP-TO-DATE
+> Task :app:mergeLabDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeLabDebugNativeLibs UP-TO-DATE
+> Task :app:stripLabDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningLabDebug UP-TO-DATE
+> Task :app:writeLabDebugAppMetadata UP-TO-DATE
+> Task :app:writeLabDebugSigningConfigVersions UP-TO-DATE
+> Task :app:preProductionReleaseBuild UP-TO-DATE
+> Task :app:mergeProductionReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeLibs UP-TO-DATE
+> Task :app:stripProductionReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractProductionReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeProductionReleaseArtProfile UP-TO-DATE
+> Task :app:expandProductionReleaseL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkProductionReleaseDuplicateClasses UP-TO-DATE
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseBuildConfig UP-TO-DATE
+> Task :app:checkProductionReleaseAarMetadata UP-TO-DATE
+> Task :app:processProductionReleaseNavigationResources UP-TO-DATE
+> Task :app:compileProductionReleaseNavigationResources UP-TO-DATE
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:mapProductionReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:mergeProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:createProductionReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifestForPackage UP-TO-DATE
+> Task :app:processProductionReleaseResources UP-TO-DATE
+> Task :app:compileLabDebugKotlin
+> Task :app:compileProductionReleaseKotlin
+
+> Task :app:compileLabDebugKotlin
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/MainActivity.kt:6:8 'class WifiConfiguration : Any, Parcelable' is deprecated. Deprecated in Java.
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/PolicyController.kt:31:21 'static field DISALLOW_ADD_MANAGED_PROFILE: String' is deprecated. Deprecated in Java.
+
+> Task :app:compileLabDebugJavaWithJavac UP-TO-DATE
+
+> Task :app:compileProductionReleaseKotlin
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/MainActivity.kt:6:8 'class WifiConfiguration : Any, Parcelable' is deprecated. Deprecated in Java.
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/PolicyController.kt:31:21 'static field DISALLOW_ADD_MANAGED_PROFILE: String' is deprecated. Deprecated in Java.
+
+> Task :app:dexBuilderLabDebug
+> Task :app:mergeLabDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processLabDebugJavaRes UP-TO-DATE
+> Task :app:mergeLabDebugJavaResource UP-TO-DATE
+> Task :app:javaPreCompileProductionRelease UP-TO-DATE
+> Task :app:compileProductionReleaseJavaWithJavac UP-TO-DATE
+> Task :app:mergeProjectDexLabDebug
+> Task :app:dexBuilderProductionRelease
+> Task :app:desugarProductionReleaseFileDependencies UP-TO-DATE
+> Task :app:mergeProductionReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexProductionRelease UP-TO-DATE
+> Task :app:packageLabDebug
+> Task :app:createLabDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleLabDebug
+> Task :app:mergeProductionReleaseGlobalSynthetics UP-TO-DATE
+> Task :app:mergeProductionReleaseShaders UP-TO-DATE
+> Task :app:compileProductionReleaseShaders NO-SOURCE
+> Task :app:generateProductionReleaseAssets UP-TO-DATE
+> Task :app:mergeProductionReleaseAssets UP-TO-DATE
+> Task :app:compressProductionReleaseAssets UP-TO-DATE
+> Task :app:extractProductionReleaseVersionControlInfo UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:generateProductionReleaseLintVitalReportModel
+> Task :app:mergeDexProductionRelease
+> Task :app:lintVitalAnalyzeProductionRelease
+> Task :app:l8DexDesugarLibProductionRelease
+> Task :app:compileProductionReleaseArtProfile
+> Task :app:processProductionReleaseJavaRes UP-TO-DATE
+> Task :app:mergeProductionReleaseJavaResource UP-TO-DATE
+> Task :app:optimizeProductionReleaseResources UP-TO-DATE
+> Task :app:collectProductionReleaseDependencies UP-TO-DATE
+> Task :app:sdkProductionReleaseDependencyData UP-TO-DATE
+> Task :app:writeProductionReleaseAppMetadata UP-TO-DATE
+> Task :app:writeProductionReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:bundleLabDebugClassesToCompileJar
+> Task :app:preLabDebugAndroidTestBuild SKIPPED
+> Task :app:processLabDebugAndroidTestManifest UP-TO-DATE
+> Task :app:generateLabDebugAndroidTestBuildConfig UP-TO-DATE
+> Task :app:checkLabDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :app:processLabDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :app:compileLabDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :app:generateLabDebugAndroidTestResValues UP-TO-DATE
+> Task :app:mapLabDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:generateLabDebugAndroidTestResources UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestResources UP-TO-DATE
+> Task :app:processLabDebugAndroidTestResources UP-TO-DATE
+> Task :app:compileLabDebugAndroidTestKotlin UP-TO-DATE
+> Task :app:javaPreCompileLabDebugAndroidTest UP-TO-DATE
+> Task :app:compileLabDebugAndroidTestJavaWithJavac UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestShaders UP-TO-DATE
+> Task :app:compileLabDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateLabDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestAssets UP-TO-DATE
+> Task :app:compressLabDebugAndroidTestAssets UP-TO-DATE
+> Task :app:checkLabDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:desugarLabDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexLabDebugAndroidTest UP-TO-DATE
+> Task :app:dexBuilderLabDebugAndroidTest UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :app:processLabDebugAndroidTestJavaRes UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestJavaResource UP-TO-DATE
+> Task :app:mergeLibDexLabDebugAndroidTest UP-TO-DATE
+> Task :app:mergeProjectDexLabDebugAndroidTest UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeLabDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripLabDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningLabDebugAndroidTest UP-TO-DATE
+> Task :app:writeLabDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:packageLabDebugAndroidTest UP-TO-DATE
+> Task :app:createLabDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleLabDebugAndroidTest UP-TO-DATE
+> Task :app:generateProductionReleaseLintReportModel
+> Task :app:bundleProductionReleaseClassesToCompileJar
+> Task :app:preProductionReleaseUnitTestBuild UP-TO-DATE
+> Task :app:generateProductionReleaseUnitTestLintModel
+
+> Task :app:lintVitalAnalyzeProductionRelease
+Warning: Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
+
+> Task :app:lintVitalReportProductionRelease SKIPPED
+> Task :app:lintVitalProductionRelease SKIPPED
+> Task :app:packageProductionRelease
+> Task :app:createProductionReleaseApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleProductionRelease
+> Task :app:lintAnalyzeProductionReleaseUnitTest
+> Task :app:lintAnalyzeProductionRelease
+
+> Task :app:lintReportProductionRelease
+Wrote HTML report to file:///workspace/focus-guard/android/app/build/reports/lint-results-productionRelease.html
+
+> Task :app:lintProductionRelease
+
+BUILD SUCCESSFUL in 2m 21s
+133 actionable tasks: 20 executed, 113 up-to-date

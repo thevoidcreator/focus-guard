@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored /workspace/focus-guard/windows/FocusGuard.Core/FocusGuard.Core.csproj (in 892 ms).
+  Restored /workspace/focus-guard/windows/FocusGuard.Tests/FocusGuard.Tests.csproj (in 890 ms).
+  Determining projects to restore...
+  Restored /workspace/focus-guard/windows/FocusGuard.Core/FocusGuard.Core.csproj (in 802 ms).
+  Restored /workspace/focus-guard/windows/FocusGuard.Console/FocusGuard.Console.csproj (in 844 ms).

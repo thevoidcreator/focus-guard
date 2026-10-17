@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.focusguard.core.GoldenTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-17T13:13:14.890Z" hostname="28f2c01724d9" time="0.026">
+  <properties/>
+  <testcase name="crossLanguageVectors()" classname="ru.focusguard.core.GoldenTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+PASS .NET PKCS#8 decrypted by Python cryptography; P-256
+    5:d=2  hl=2 l=   9 prim: OBJECT            :PBES2
+   20:d=4  hl=2 l=   9 prim: OBJECT            :PBKDF2
+   51:d=5  hl=2 l=   3 prim: INTEGER           :0927C0
+   58:d=6  hl=2 l=   8 prim: OBJECT            :hmacWithSHA256
+   72:d=4  hl=2 l=   9 prim: OBJECT            :aes-256-cbc

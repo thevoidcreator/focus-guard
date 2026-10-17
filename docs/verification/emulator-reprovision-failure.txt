@@ -1,0 +1,29 @@
+Connected to disposable API31 emulator
+BOOT_COMPLETED
+Pushing app-lab-debug.apk
+Success
+
+Pushing app-lab-debug-androidTest.apk
+Success
+
+
+Exception occurred while executing 'set-device-owner':
+java.lang.IllegalArgumentException: Trying to set an admin which is being removed
+	at com.android.server.devicepolicy.DevicePolicyManagerService.checkActiveAdminPrecondition(DevicePolicyManagerService.java:3554)
+	at com.android.server.devicepolicy.DevicePolicyManagerService.setActiveAdmin(DevicePolicyManagerService.java:3430)
+	at com.android.server.devicepolicy.DevicePolicyManagerServiceShellCommand.runSetDeviceOwner(DevicePolicyManagerServiceShellCommand.java:253)
+	at com.android.server.devicepolicy.DevicePolicyManagerServiceShellCommand.onCommand(DevicePolicyManagerServiceShellCommand.java:89)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.devicepolicy.DevicePolicyManagerService.onShellCommand(DevicePolicyManagerService.java:9728)
+	at android.os.Binder.shellCommand(Binder.java:950)
+	at android.os.Binder.onTransact(Binder.java:834)
+	at android.app.admin.IDevicePolicyManager$Stub.onTransact(IDevicePolicyManager.java:6966)
+	at android.os.Binder.execTransactInternal(Binder.java:1184)
+	at android.os.Binder.execTransact(Binder.java:1143)
+
+Traceback (most recent call last):
+  File "/workspace/work/emulator_smoke_v2.py", line 27, in <module>
+    out=x.shell('dpm set-device-owner '+pkg+'/ru.focusguard.android.AdminReceiver',timeout_s=90,read_timeout_s=90);print(out,flush=True);assert 'Success' in out
+                                                                                                                                                ^^^^^^^^^^^^^^^^
+AssertionError
