@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1-guardian",
   "status": "LAB_TEST_BUILD_NOT_HARDWARE_ACCEPTED",
-  "sourceCommit": "6cf06cf92d01abf21e031d0e7897b8992b82aa25",
+  "sourceCommit": "e426907d588bb3bd8e227a55a030adebe5625c4d",
   "sourceBranch": "codex/android-companion",
   "tests": {
     "kotlinPassed": 33,
@@ -11,29 +11,52 @@
     "redmiAndroid16": "NOT_RUN",
     "nothingAndroid16": "NOT_RUN",
     "whatsappRealDevices": "NOT_RUN",
-    "instrumentation": "COMPILED_NOT_RUN"
+    "instrumentation": "COMPILED_NOT_RUN",
+    "guardianAndroid11Lint": "PASS",
+    "guardianAndroid11Runtime": "NOT_RUN"
   },
   "signing": "laboratory Android debug certificate, Windows unsigned Authenticode",
   "artifacts": [
     {
       "file": "FocusGuard-0.2-Windows-win-x64.zip",
       "bytes": 63484743,
-      "sha256": "8ea248616d230cb3e42330a12368776f723786fe9ede4d474d5568e005a6a14c"
+      "sha256": "8ea248616d230cb3e42330a12368776f723786fe9ede4d474d5568e005a6a14c",
+      "sourceCommit": "6cf06cf92d01abf21e031d0e7897b8992b82aa25"
     },
     {
       "file": "FocusGuard-0.2-guardian.apk",
-      "bytes": 28090210,
-      "sha256": "4b82cc267d1ccacf8cba6b4bbaaf726d582d5e0f330e18333ec847e18f324d21"
+      "bytes": 27753169,
+      "sha256": "977260d8f989c72ef7476191714c8de470a74e1045c12622146006e57573f760",
+      "sourceCommit": "e426907d588bb3bd8e227a55a030adebe5625c4d",
+      "version": "0.2.1",
+      "minSdk": 30
     },
     {
       "file": "FocusGuard-0.2-phone-lab.apk",
       "bytes": 28452705,
-      "sha256": "fc1a7ab8c402ec936e813abaab677690420e1e78f01e8c9a95846a050c1c250a"
+      "sha256": "fc1a7ab8c402ec936e813abaab677690420e1e78f01e8c9a95846a050c1c250a",
+      "sourceCommit": "6cf06cf92d01abf21e031d0e7897b8992b82aa25"
     },
     {
       "file": "FocusGuard-0.2-source.zip",
-      "bytes": 218000,
-      "sha256": "82790eb643d207fd207bef0002ddb6a4f9a10a848547d713a2c87a3df2b8478d"
+      "bytes": 222569,
+      "sha256": "e5870f12b620b72219aeaa15327105b17ee86b9450ec48e6e7a43efc6924fd4f",
+      "sourceCommit": "e426907d588bb3bd8e227a55a030adebe5625c4d"
+    },
+    {
+      "file": "FocusGuard-0.2.1-guardian-android11.apk",
+      "bytes": 27753169,
+      "sha256": "977260d8f989c72ef7476191714c8de470a74e1045c12622146006e57573f760",
+      "sourceCommit": "e426907d588bb3bd8e227a55a030adebe5625c4d",
+      "version": "0.2.1",
+      "minSdk": 30
     }
-  ]
+  ],
+  "guardianCompatibility": {
+    "versionName": "0.2.1",
+    "versionCode": 3,
+    "minSdk": 30,
+    "minimumAndroid": "11",
+    "sameSigningCertificate": true
+  }
 }

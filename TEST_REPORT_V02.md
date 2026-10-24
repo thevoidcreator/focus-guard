@@ -70,3 +70,17 @@ win-x64 опубликован с RestoreLockedMode=true. APK Signature Scheme v
 
 Production activation остаётся закрытой. Не переносить защиту на основной телефон
 до отдельной аппаратной приёмки и проверенного восстановления без потерь.
+
+## Обновление guardian0.2.1 для Android11
+
+Минимум приложения доверенного человека снижен с API31 до API30 (Android11),
+versionCode повышен до3. ApplicationId, Keystore alias и протокол не менялись.
+Подпись тем же лабораторным сертификатом позволяет обновление без удаления
+и без потери уже созданной идентичности. Ваш APK и Windows-бинарные файлы не меняются.
+
+Проверка совместимости — сборка и AndroidLint с minSdk30, проверка фактического
+minSdk/version/signature внутри APK. Системная аутентификация для ключа использует
+setUserAuthenticationParameters и AUTH_DEVICE_CREDENTIAL, доступные с API30.
+Импорт использует IntentCompat и ограниченное чтение потока, а не API33-вызовы.
+Физический Android11 здесь не подключён: запуск и подтверждение PIN-кодом
+на нём пока не проверены. Лог проверки: verification/v02/guardian-android11-build.txt.

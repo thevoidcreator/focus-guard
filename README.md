@@ -1,9 +1,11 @@
 # Focus Guard 0.2 — файлы для скачивания
 
+Обновление 0.2.1: приложение доверенного человека поддерживает Android 11+. APK вашего телефона и Windows-бинарные файлы не менялись.
+
 Это тестовая сборка. Сначала отдельный Redmi; основной Nothing ещё не прошёл приёмку.
 
 - **Вам на телефон:** [FocusGuard-0.2-phone-lab.apk](FocusGuard-0.2-phone-lab.apk?raw=true) — Android12+, установка через ADB с `-t`.
-- **Доверенному человеку:** [FocusGuard-0.2-guardian.apk](FocusGuard-0.2-guardian.apk?raw=true) — Android12+, обычная установка APK, PIN-код экрана.
+- **Доверенному человеку:** [FocusGuard-0.2.1-guardian-android11.apk](FocusGuard-0.2.1-guardian-android11.apk?raw=true) — Android11+, обычная установка APK, PIN-код экрана.
 - **Вам на ПК:** [FocusGuard-0.2-Windows-win-x64.zip](FocusGuard-0.2-Windows-win-x64.zip?raw=true) — распаковать целиком, открыть `FocusGuard.KeyConsole.exe`.
 - **Исходники:** [FocusGuard-0.2-source.zip](FocusGuard-0.2-source.zip?raw=true), ветка [codex/android-companion](https://github.com/thevoidcreator/focus-guard/tree/codex/android-companion).
 
