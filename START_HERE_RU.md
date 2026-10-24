@@ -7,7 +7,7 @@ Nothing Phone (3a) Android16. Сначала отдельный тестовый
 ## Что скачать
 
 - Вам на тестовый телефон: `FocusGuard-0.2-phone-lab.apk`.
-- Доверенному человеку: `FocusGuard-0.2-guardian.apk`.
+- Доверенному человеку: `FocusGuard-0.2.1-guardian-android11.apk`.
 - Вам на Windows11 x64: `FocusGuard-0.2-Windows-win-x64.zip`.
 
 Сверьте SHA256 с `SHA256SUMS.txt`. ZIP распаковывается целиком; запустить
@@ -34,7 +34,8 @@ adb -s TEST_SERIAL shell dpm remove-active-admin ru.focusguard.android.lab/ru.fo
 применение ответа Windows0.1 и повтор незавершённого снятия. Это не миграция
 активных ограничений в новую схему.
 Установка phone-lab через ADB: `adb -s TEST_SERIAL install -t FocusGuard-0.2-phone-lab.apk`.
-Guardian ставится обычной установкой APK. Телефон доверенного человека не требует
+Guardian 0.2.1 поддерживает Android 11+ (API30) и ставится обычной установкой APK.
+Если версия0.2 уже установлена на Android12+, обновите поверх неё без удаления: подпись и идентичность сохраняются. Телефон доверенного человека не требует
 Device Owner, сброса, отладки или специальных разрешений на SMS/уведомления.
 
 ## 1. Настройте ваш тестовый телефон

@@ -1,7 +1,7 @@
 plugins { id("com.android.application"); kotlin("android"); kotlin("plugin.serialization"); id("org.jetbrains.kotlin.plugin.compose") }
 android {
     namespace = "ru.focusguard.guardian"; compileSdk = 36; buildToolsVersion = "36.0.0"
-    defaultConfig { applicationId = "ru.focusguard.guardian"; minSdk = 31; targetSdk = 36; versionCode = 2; versionName = "0.2.0" }
+    defaultConfig { applicationId = "ru.focusguard.guardian"; minSdk = 30; targetSdk = 36; versionCode = 3; versionName = "0.2.1" }
     buildFeatures { compose = true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21; isCoreLibraryDesugaringEnabled = true }
     kotlinOptions { jvmTarget = "21" }

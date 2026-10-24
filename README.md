@@ -11,7 +11,7 @@
 ## Три приложения
 
 - `FocusGuard-0.2-phone-lab.apk` — на ваш отдельный тестовый Android 12+.
-- `FocusGuard-0.2-guardian.apk` — доверенному человеку, Android 12+, с PIN-кодом.
+- `FocusGuard-0.2.1-guardian-android11.apk` — доверенному человеку, Android 11+, с PIN-кодом.
 - `FocusGuard-0.2-Windows-win-x64.zip` — Windows 11 x64, только USB-восстановление.
 
 Начните с [пошаговой инструкции](START_HERE_RU.md).
