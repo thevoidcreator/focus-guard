@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "status": "LAB_TEST_BUILD_NOT_HARDWARE_ACCEPTED",
+  "sourceCommit": "8a85dc28692410d9995a42521426a21716bf6990",
+  "sourceBranch": "codex/android-companion",
+  "tests": {
+    "kotlinPassed": 33,
+    "dotnetPassed": 11,
+    "lintErrors": 0,
+    "realWindowsUsb": "NOT_RUN",
+    "redmiAndroid16": "NOT_RUN",
+    "nothingAndroid16": "NOT_RUN",
+    "whatsappRealDevices": "NOT_RUN",
+    "instrumentation": "COMPILED_NOT_RUN"
+  },
+  "signing": "laboratory Android debug certificate, Windows unsigned Authenticode",
+  "artifacts": [
+    {
+      "file": "FocusGuard-0.2-Windows-win-x64.zip",
+      "bytes": 63484512,
+      "sha256": "05e4ccce0beb53ec7364781712f2d95278eb33625b7e61195ed0b5f819a74dc0"
+    },
+    {
+      "file": "FocusGuard-0.2-guardian.apk",
+      "bytes": 28090210,
+      "sha256": "4b82cc267d1ccacf8cba6b4bbaaf726d582d5e0f330e18333ec847e18f324d21"
+    },
+    {
+      "file": "FocusGuard-0.2-phone-lab.apk",
+      "bytes": 28452705,
+      "sha256": "256b3c85bac95a2bb4a841161df2162f97163f7520ef2c74adf9f87baf1de7f1"
+    },
+    {
+      "file": "FocusGuard-0.2-source.zip",
+      "bytes": 215665,
+      "sha256": "3892fe1c827c76911dd0802631bc25df6ab86b4f5fdb68370b2e958a64ee614b"
+    }
+  ]
+}
