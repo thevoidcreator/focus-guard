@@ -16,7 +16,9 @@ class GuardRuntime(private val ctx: Context) {
         var s = store.read()
         if (s.daily != null) {
             val d = s.daily!!
-            val charge = if (s.activated) runCatching { UsageMonitor.charging(ctx, s) }.getOrDefault(true) else false
+            // When monitoring is unavailable ordinary apps are locked. Do not charge
+            // that locked interval as if the user were using an ordinary app.
+            val charge = if (s.activated && UsageMonitor.ready(ctx)) runCatching { UsageMonitor.charging(ctx, s) }.getOrDefault(true) else false
             val next = DailyEngine.tick(d, reading, charge).let { if (d.boot != reading.boot) it.copy(unlimited = false) else it }
             val open = UsageMonitor.ready(ctx) && (next.remaining > 0 || next.unlimited && next.time(reading) != null)
             s = s.copy(daily = next, mode = if (open) Mode.SESSION_ACTIVE else Mode.LOCKED, sessionDeadline = 0)
