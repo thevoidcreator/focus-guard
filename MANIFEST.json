@@ -1,7 +1,7 @@
 {
   "version": "0.2.0",
   "status": "LAB_TEST_BUILD_NOT_HARDWARE_ACCEPTED",
-  "sourceCommit": "8a85dc28692410d9995a42521426a21716bf6990",
+  "sourceCommit": "6cf06cf92d01abf21e031d0e7897b8992b82aa25",
   "sourceBranch": "codex/android-companion",
   "tests": {
     "kotlinPassed": 33,
@@ -17,8 +17,8 @@
   "artifacts": [
     {
       "file": "FocusGuard-0.2-Windows-win-x64.zip",
-      "bytes": 63484512,
-      "sha256": "05e4ccce0beb53ec7364781712f2d95278eb33625b7e61195ed0b5f819a74dc0"
+      "bytes": 63484743,
+      "sha256": "8ea248616d230cb3e42330a12368776f723786fe9ede4d474d5568e005a6a14c"
     },
     {
       "file": "FocusGuard-0.2-guardian.apk",
@@ -28,12 +28,12 @@
     {
       "file": "FocusGuard-0.2-phone-lab.apk",
       "bytes": 28452705,
-      "sha256": "256b3c85bac95a2bb4a841161df2162f97163f7520ef2c74adf9f87baf1de7f1"
+      "sha256": "fc1a7ab8c402ec936e813abaab677690420e1e78f01e8c9a95846a050c1c250a"
     },
     {
       "file": "FocusGuard-0.2-source.zip",
-      "bytes": 215665,
-      "sha256": "3892fe1c827c76911dd0802631bc25df6ab86b4f5fdb68370b2e958a64ee614b"
+      "bytes": 218000,
+      "sha256": "82790eb643d207fd207bef0002ddb6a4f9a10a848547d713a2c87a3df2b8478d"
     }
   ]
 }
