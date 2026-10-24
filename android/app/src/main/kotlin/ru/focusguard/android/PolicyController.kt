@@ -56,7 +56,7 @@ class PolicyController(private val ctx: Context) {
         val installedIds = installed.map { it.pkg }.toSet()
         val forbidden = inv.settingsPackages()
         val ordinary = if (s.mode == Mode.SESSION_ACTIVE) installed.filter { !it.system }.map { it.pkg }.toSet() + inv.launchable() else emptySet()
-        val allowed = (inv.dependencies(installed) + inv.verified(s.policy.apps) + ordinary) - forbidden
+        val allowed = (inv.dependencies(installed) + inv.verified(s.policy.apps) + ordinary + DocumentAccess.active()) - forbidden
         require(ctx.packageName in allowed)
         dpm.setLockTaskFeatures(admin, DevicePolicyManager.LOCK_TASK_FEATURE_HOME or DevicePolicyManager.LOCK_TASK_FEATURE_KEYGUARD or
             DevicePolicyManager.LOCK_TASK_FEATURE_GLOBAL_ACTIONS or DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO or DevicePolicyManager.LOCK_TASK_FEATURE_BLOCK_ACTIVITY_START_IN_TASK)

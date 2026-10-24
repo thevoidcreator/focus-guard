@@ -25,7 +25,7 @@ enum class Removal { NONE, WAITING_48H, READY_FOR_FINAL_CONFIRMATION, DEPROVISIO
     val dateTrusted: Boolean = true, val stableMs: Long = 0, val highDay: Long = Long.MIN_VALUE,
     val consumedDay: Long = Long.MIN_VALUE, val sessionDeadline: Long = 0, val cooldownMs: Long = 0,
     val pauseStarted: Long? = null, val flow: Flow? = null, val challenge: Challenge? = null,
-    val deprovisionStage: Int = 0, val error: String = ""
+    val deprovisionStage: Int = 0, val error: String = "", val daily: DailyState? = null
 )
 data class Reading(val boot: Long, val mono: Long, val wall: Long, val automatic: Boolean = true)
 fun accountDay(wall: Long, zone: String): Long = Instant.ofEpochMilli(wall).atZone(ZoneId.of(zone))

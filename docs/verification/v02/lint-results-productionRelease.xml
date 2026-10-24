@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2">
+
+    <issue
+        id="NewerVersionAvailable"
+        severity="Warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.9.0 is available: 1.12.0"
+        category="Correctness"
+        priority="4"
+        summary="Newer Library Versions Available"
+        explanation="This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower."
+        errorLine1="    implementation(&quot;org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/focus-guard/android/app/build.gradle.kts"
+            line="23"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `String.toUri` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="        val intents = listOfNotNull(Intent(Intent.ACTION_DIAL, android.net.Uri.parse(&quot;tel:&quot;)),"
+        errorLine2="                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/Inventory.kt"
+            line="32"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `String.toUri` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="                if (s.removal == Removal.COMPLETE) Button(onClick = { startActivity(Intent(Intent.ACTION_DELETE, Uri.parse(&quot;package:$packageName&quot;))) }) { Text(&quot;Управление снято — удалить старую установку&quot;) }"
+        errorLine2="                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/MainActivity.kt"
+            line="132"
+            column="114"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `String.toUri` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="                Button(onClick = { startActivity(Intent(Intent.ACTION_DELETE, Uri.parse(&quot;package:$packageName&quot;))) }) { Text(&quot;Удалить Focus Guard&quot;) }"
+        errorLine2="                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/MainActivity.kt"
+            line="216"
+            column="79"/>
+    </issue>
+
+</issues>

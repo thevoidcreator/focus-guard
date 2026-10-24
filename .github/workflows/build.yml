@@ -19,7 +19,7 @@ jobs:
       - run: python scripts/verify-manifest.py production-manifest.xml
       - uses: actions/upload-artifact@v4
         with:
-          name: android-lab-and-production-disabled
+          name: android-phone-guardian-and-production-disabled
           path: dist/android
   windows:
     runs-on: windows-latest
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: windows-win-x64
-          path: dist/FocusGuard-Windows-win-x64.zip
+          path: dist/FocusGuard-0.2-Windows-win-x64.zip
   emulator:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +45,7 @@ jobs:
       - run: cd android && ./gradlew :app:assembleLabDebug :app:assembleLabDebugAndroidTest
       - uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 31
+          api-level: 36
           arch: x86_64
           profile: pixel_4
           disable-animations: true

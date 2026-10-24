@@ -32,6 +32,14 @@ object Protocol {
         return bytes
     }
     fun nonce() = encode(ByteArray(32).also { SecureRandom().nextBytes(it) })
+    fun readStream(input: java.io.InputStream): String = input.use {
+        val out = java.io.ByteArrayOutputStream(); val buffer = ByteArray(1024)
+        while (true) {
+            val count = it.read(buffer); if (count < 0) break
+            require(out.size() + count <= MAX_INPUT) { "Файл слишком большой" }; out.write(buffer, 0, count)
+        }
+        out.toByteArray().toString(Charsets.UTF_8)
+    }
     fun digest(text: String) = encode(MessageDigest.getInstance("SHA-256").digest(text.toByteArray(Charsets.UTF_8)))
     fun keyId(spki: String): String { publicKey(spki); return encode(MessageDigest.getInstance("SHA-256").digest(decode(spki))) }
     fun publicKey(spki: String): ECPublicKey {

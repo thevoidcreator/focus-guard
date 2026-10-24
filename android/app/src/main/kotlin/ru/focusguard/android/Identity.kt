@@ -20,4 +20,5 @@ class Identity {
     val publicSpki: String get() = Protocol.encode(ks.getCertificate("phone-identity-v1").publicKey.encoded)
     val keyId: String get() = Protocol.keyId(publicSpki)
     fun sign(m: Message): String = Protocol.sign(m, ks.getKey("phone-identity-v1", null) as PrivateKey)
+    fun sign(m: Approval): String = CompanionProtocol.sign(m, ks.getKey("phone-identity-v1", null) as PrivateKey)
 }

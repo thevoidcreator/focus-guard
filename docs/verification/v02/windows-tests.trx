@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="cfce92e2-4d14-445e-961d-d4145ee48611" name="@cd1d40bdf193 2026-10-24 14:40:02" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-24T14:40:02.2736646+00:00" queuing="2026-10-24T14:40:02.2736646+00:00" start="2026-10-24T14:39:59.4453791+00:00" finish="2026-10-24T14:40:09.3513023+00:00" />
+  <TestSettings name="default" id="d70cbdd6-e6d2-4370-b1d2-1b9bc9d9bb91">
+    <Deployment runDeploymentRoot="_cd1d40bdf193_2026-10-24_14_40_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="48f127da-8e77-4c15-837f-c0418d278b8f" testId="29df03ce-1669-5997-b749-68b3a46df792" testName="CompanionTests.KotlinFg2Signatures" computerName="cd1d40bdf193" duration="00:00:00.1935215" startTime="2026-10-24T14:40:01.1904265+00:00" endTime="2026-10-24T14:40:01.4150400+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48f127da-8e77-4c15-837f-c0418d278b8f" />
+    <UnitTestResult executionId="3fc2b8f6-f971-432d-b052-3c256f9556f6" testId="a89d7331-ec1c-0f8d-0d5d-2ae05b9fcccf" testName="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;{\&quot;a\&quot;:1,\&quot;a\&quot;:2}&quot;)" computerName="cd1d40bdf193" duration="00:00:00.0010562" startTime="2026-10-24T14:40:09.1653836+00:00" endTime="2026-10-24T14:40:09.1655777+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fc2b8f6-f971-432d-b052-3c256f9556f6" />
+    <UnitTestResult executionId="487a0342-8a8c-4419-8e8a-334cc5092e09" testId="b00bc3a5-27dc-2442-7260-70053b74e398" testName="CompanionTests.RoundTripAndTampering" computerName="cd1d40bdf193" duration="00:00:00.0190875" startTime="2026-10-24T14:40:01.4518800+00:00" endTime="2026-10-24T14:40:01.4708523+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="487a0342-8a8c-4419-8e8a-334cc5092e09" />
+    <UnitTestResult executionId="4d69cdcf-93dd-44a5-936a-ab7b397fccaf" testId="d59b5ac7-7519-b761-1146-a507a8398c57" testName="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;[[[[[[[[[[]]]]]]]]]]&quot;)" computerName="cd1d40bdf193" duration="00:00:00.0012913" startTime="2026-10-24T14:40:09.1662044+00:00" endTime="2026-10-24T14:40:09.1719309+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d69cdcf-93dd-44a5-936a-ab7b397fccaf" />
+    <UnitTestResult executionId="a18f8030-a065-48a9-b404-41230c60495b" testId="d3d60a1b-e4d5-d625-7206-9d3ce7188b31" testName="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;{} {}&quot;)" computerName="cd1d40bdf193" duration="00:00:00.0013503" startTime="2026-10-24T14:40:09.1658332+00:00" endTime="2026-10-24T14:40:09.1659644+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a18f8030-a065-48a9-b404-41230c60495b" />
+    <UnitTestResult executionId="7c34c5d3-f710-4cb7-8dd7-a9530463aca9" testId="4f9a7ea1-a3e2-1435-326a-d953c1c90a53" testName="FocusGuard.Tests.ProtocolTests.GoldenVectorsFromPythonAndKotlin" computerName="cd1d40bdf193" duration="00:00:00.0112929" startTime="2026-10-24T14:40:01.5640219+00:00" endTime="2026-10-24T14:40:01.5640710+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c34c5d3-f710-4cb7-8dd7-a9530463aca9" />
+    <UnitTestResult executionId="3b22c48a-eb89-4865-8cda-c35bb9e2caa0" testId="ff3f07c7-6809-343a-dd2d-7e13c4545c24" testName="FocusGuard.Tests.ProtocolTests.DisallowedHeadersAndOversize" computerName="cd1d40bdf193" duration="00:00:00.2006060" startTime="2026-10-24T14:40:01.1920132+00:00" endTime="2026-10-24T14:40:01.4225401+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b22c48a-eb89-4865-8cda-c35bb9e2caa0" />
+    <UnitTestResult executionId="d310cdc4-572b-4f94-90ce-a43ec3dccbce" testId="d55eb227-aba7-8b21-94d9-c4f1263142f8" testName="CompanionTests.UsbDoesNotAcceptGuardianAction" computerName="cd1d40bdf193" duration="00:00:00.0335005" startTime="2026-10-24T14:40:01.4457604+00:00" endTime="2026-10-24T14:40:01.4516012+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d310cdc4-572b-4f94-90ce-a43ec3dccbce" />
+    <UnitTestResult executionId="a9493584-8d8f-489e-8b40-253501286d6e" testId="e4072630-bf27-5e30-a3d2-74d80164fc9c" testName="FocusGuard.Tests.ProtocolTests.WrongRoleAndDeviceKeyRejected" computerName="cd1d40bdf193" duration="00:00:00.1039242" startTime="2026-10-24T14:40:01.4463359+00:00" endTime="2026-10-24T14:40:01.5239590+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9493584-8d8f-489e-8b40-253501286d6e" />
+    <UnitTestResult executionId="2ae0f07c-b8da-44a9-a3f1-65871f13b54c" testId="22322873-6283-625a-deb4-3962320a1f96" testName="FocusGuard.Tests.ProtocolTests.ExactBytesSignatureAndDigest" computerName="cd1d40bdf193" duration="00:00:00.0250191" startTime="2026-10-24T14:40:01.5245585+00:00" endTime="2026-10-24T14:40:01.5638558+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ae0f07c-b8da-44a9-a3f1-65871f13b54c" />
+    <UnitTestResult executionId="4cec0716-c3e4-47a8-bf13-3b7555e53c4a" testId="d3c8bb09-462f-c0b7-2ad9-1e659d0a28ff" testName="FocusGuard.Tests.ProtocolTests.RealPkcs8WrongPasswordAndUsbRemoval" computerName="cd1d40bdf193" duration="00:00:07.6007796" startTime="2026-10-24T14:40:01.5641745+00:00" endTime="2026-10-24T14:40:09.1621134+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cec0716-c3e4-47a8-bf13-3b7555e53c4a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="CompanionTests.KotlinFg2Signatures" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="29df03ce-1669-5997-b749-68b3a46df792">
+      <Execution id="48f127da-8e77-4c15-837f-c0418d278b8f" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CompanionTests" name="KotlinFg2Signatures" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;[[[[[[[[[[]]]]]]]]]]&quot;)" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="d59b5ac7-7519-b761-1146-a507a8398c57">
+      <Execution id="4d69cdcf-93dd-44a5-936a-ab7b397fccaf" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="StrictJsonRejects" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.WrongRoleAndDeviceKeyRejected" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="e4072630-bf27-5e30-a3d2-74d80164fc9c">
+      <Execution id="a9493584-8d8f-489e-8b40-253501286d6e" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="WrongRoleAndDeviceKeyRejected" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.GoldenVectorsFromPythonAndKotlin" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="4f9a7ea1-a3e2-1435-326a-d953c1c90a53">
+      <Execution id="7c34c5d3-f710-4cb7-8dd7-a9530463aca9" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="GoldenVectorsFromPythonAndKotlin" />
+    </UnitTest>
+    <UnitTest name="CompanionTests.RoundTripAndTampering" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="b00bc3a5-27dc-2442-7260-70053b74e398">
+      <Execution id="487a0342-8a8c-4419-8e8a-334cc5092e09" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CompanionTests" name="RoundTripAndTampering" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;{\&quot;a\&quot;:1,\&quot;a\&quot;:2}&quot;)" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="a89d7331-ec1c-0f8d-0d5d-2ae05b9fcccf">
+      <Execution id="3fc2b8f6-f971-432d-b052-3c256f9556f6" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="StrictJsonRejects" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.ExactBytesSignatureAndDigest" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="22322873-6283-625a-deb4-3962320a1f96">
+      <Execution id="2ae0f07c-b8da-44a9-a3f1-65871f13b54c" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="ExactBytesSignatureAndDigest" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.DisallowedHeadersAndOversize" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="ff3f07c7-6809-343a-dd2d-7e13c4545c24">
+      <Execution id="3b22c48a-eb89-4865-8cda-c35bb9e2caa0" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="DisallowedHeadersAndOversize" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.StrictJsonRejects(text: &quot;{} {}&quot;)" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="d3d60a1b-e4d5-d625-7206-9d3ce7188b31">
+      <Execution id="a18f8030-a065-48a9-b404-41230c60495b" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="StrictJsonRejects" />
+    </UnitTest>
+    <UnitTest name="CompanionTests.UsbDoesNotAcceptGuardianAction" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="d55eb227-aba7-8b21-94d9-c4f1263142f8">
+      <Execution id="d310cdc4-572b-4f94-90ce-a43ec3dccbce" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CompanionTests" name="UsbDoesNotAcceptGuardianAction" />
+    </UnitTest>
+    <UnitTest name="FocusGuard.Tests.ProtocolTests.RealPkcs8WrongPasswordAndUsbRemoval" storage="/workspace/focus-guard/windows/focusguard.tests/bin/release/net10.0/focusguard.tests.dll" id="d3c8bb09-462f-c0b7-2ad9-1e659d0a28ff">
+      <Execution id="4cec0716-c3e4-47a8-bf13-3b7555e53c4a" />
+      <TestMethod codeBase="/workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FocusGuard.Tests.ProtocolTests" name="RealPkcs8WrongPasswordAndUsbRemoval" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="29df03ce-1669-5997-b749-68b3a46df792" executionId="48f127da-8e77-4c15-837f-c0418d278b8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a89d7331-ec1c-0f8d-0d5d-2ae05b9fcccf" executionId="3fc2b8f6-f971-432d-b052-3c256f9556f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b00bc3a5-27dc-2442-7260-70053b74e398" executionId="487a0342-8a8c-4419-8e8a-334cc5092e09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d59b5ac7-7519-b761-1146-a507a8398c57" executionId="4d69cdcf-93dd-44a5-936a-ab7b397fccaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d3d60a1b-e4d5-d625-7206-9d3ce7188b31" executionId="a18f8030-a065-48a9-b404-41230c60495b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f9a7ea1-a3e2-1435-326a-d953c1c90a53" executionId="7c34c5d3-f710-4cb7-8dd7-a9530463aca9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff3f07c7-6809-343a-dd2d-7e13c4545c24" executionId="3b22c48a-eb89-4865-8cda-c35bb9e2caa0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d55eb227-aba7-8b21-94d9-c4f1263142f8" executionId="d310cdc4-572b-4f94-90ce-a43ec3dccbce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4072630-bf27-5e30-a3d2-74d80164fc9c" executionId="a9493584-8d8f-489e-8b40-253501286d6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22322873-6283-625a-deb4-3962320a1f96" executionId="2ae0f07c-b8da-44a9-a3f1-65871f13b54c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d3c8bb09-462f-c0b7-2ad9-1e659d0a28ff" executionId="4cec0716-c3e4-47a8-bf13-3b7555e53c4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.13)
+[xUnit.net 00:00:00.25]   Discovering: FocusGuard.Tests
+[xUnit.net 00:00:00.39]   Discovered:  FocusGuard.Tests
+[xUnit.net 00:00:00.47]   Starting:    FocusGuard.Tests
+[xUnit.net 00:00:08.51]   Finished:    FocusGuard.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

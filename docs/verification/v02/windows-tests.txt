@@ -1,0 +1,10 @@
+  Determining projects to restore...
+  Restored /workspace/focus-guard/windows/FocusGuard.Tests/FocusGuard.Tests.csproj (in 5.29 sec).
+  1 of 2 projects are up-to-date for restore.
+  FocusGuard.Core -> /workspace/focus-guard/windows/FocusGuard.Core/bin/Release/net10.0/FocusGuard.Core.dll
+  FocusGuard.Tests -> /workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll
+Test run for /workspace/focus-guard/windows/FocusGuard.Tests/bin/Release/net10.0/FocusGuard.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: /workspace/focus-guard/windows/FocusGuard.Tests/TestResults/v02-windows.trx
+
+Passed!  - Failed:     0, Passed:    11, Skipped:     0, Total:    11, Duration: 7 s - FocusGuard.Tests.dll (net10.0)

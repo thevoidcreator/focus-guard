@@ -2,7 +2,7 @@
 """Source and artifact guardrails, not a security audit or device acceptance."""
 import pathlib, re, subprocess, os
 root=pathlib.Path(__file__).resolve().parents[1]
-for folder in ['android/app/src/main', 'android/core/src/main', 'windows/FocusGuard.Core', 'windows/FocusGuard.Console']:
+for folder in ['android/app/src/main', 'android/core/src/main', 'android/guardian/src/main', 'windows/FocusGuard.Core', 'windows/FocusGuard.Console']:
     for p in (root/folder).rglob('*'):
         if not p.is_file() or any(x in p.parts for x in ['bin','obj','build']): continue
         if p.suffix not in ['.kt','.cs','.xml','.xaml']: continue

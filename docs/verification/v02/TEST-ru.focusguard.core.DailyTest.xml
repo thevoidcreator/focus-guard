@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.focusguard.core.DailyTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:51:40.290Z" hostname="cd1d40bdf193" time="0.976">
+  <properties/>
+  <testcase name="expiryAndCancellation()" classname="ru.focusguard.core.DailyTest" time="0.362"/>
+  <testcase name="guardianDayDoesNotRemoveAndRemoveIsSeparate()" classname="ru.focusguard.core.DailyTest" time="0.08"/>
+  <testcase name="earlyRecoveryAndWrongFlowRejected()" classname="ru.focusguard.core.DailyTest" time="0.089"/>
+  <testcase name="localClockJumpIsIgnored()" classname="ru.focusguard.core.DailyTest" time="0.003"/>
+  <testcase name="resetAtFourMoscowAndNoCarry()" classname="ru.focusguard.core.DailyTest" time="0.004"/>
+  <testcase name="dotnetVectorWhenPresent()" classname="ru.focusguard.core.DailyTest" time="0.012"/>
+  <testcase name="calendarRecoveryIncludesPoweredOffTimeAndNeedsUsb()" classname="ru.focusguard.core.DailyTest" time="0.078"/>
+  <testcase name="guardianCannotReplaceUsbWithPolicy()" classname="ru.focusguard.core.DailyTest" time="0.023"/>
+  <testcase name="audioScreenOffPipAndExemptions()" classname="ru.focusguard.core.DailyTest" time="0.002"/>
+  <testcase name="enrollmentAfterActivationOnlyThroughRecovery()" classname="ru.focusguard.core.DailyTest" time="0.053"/>
+  <testcase name="cumulativeUnionIntervalsAndPause()" classname="ru.focusguard.core.DailyTest" time="0.003"/>
+  <testcase name="tamperActionAndOtherPhoneRejected()" classname="ru.focusguard.core.DailyTest" time="0.06"/>
+  <testcase name="oldMessagesAndUnknownFieldsAreNotAccepted()" classname="ru.focusguard.core.DailyTest" time="0.025"/>
+  <testcase name="kotlinInteropArtifact()" classname="ru.focusguard.core.DailyTest" time="0.015"/>
+  <testcase name="hourIsSingleUseAndBoundToRequest()" classname="ru.focusguard.core.DailyTest" time="0.071"/>
+  <testcase name="rebootCannotResetBudgetOrTrustLocalWall()" classname="ru.focusguard.core.DailyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

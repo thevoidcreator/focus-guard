@@ -2,24 +2,6 @@
   "version": 1,
   "dependencies": {
     "net10.0-windows7.0": {
-      "OpenCvSharp4": {
-        "type": "Direct",
-        "requested": "[4.10.0.20240616, )",
-        "resolved": "4.10.0.20240616",
-        "contentHash": "+iaFSUq0Cp+B9s1sUqDwB3PvQ5HdWWvRE50WsAw1PL8smD3VZNbe0P786E4Yfu7LHM7jeqkulOwjk2CoihsZeg=="
-      },
-      "OpenCvSharp4.runtime.win": {
-        "type": "Direct",
-        "requested": "[4.10.0.20240616, )",
-        "resolved": "4.10.0.20240616",
-        "contentHash": "dpQNIR6PpeB/oZM0e0fZpt9lOS3Htjm6ZjtOgLyxN7QwjRekbNevrmO8VbgezUoetk68CRwxYZGaymCm2vt8Sg=="
-      },
-      "ZXing.Net": {
-        "type": "Direct",
-        "requested": "[0.16.11, )",
-        "resolved": "0.16.11",
-        "contentHash": "OZfAVu88hl87BffQ+rlWCj/vLvAhhCK4QnFaoveeF/MY8SjHNSYBQ3qyUEWlPKNgBQGh1syXhCDg10vUnCsqkg=="
-      },
       "Microsoft.Extensions.DependencyInjection.Abstractions": {
         "type": "Transitive",
         "resolved": "8.0.0",
@@ -79,13 +61,6 @@
         }
       }
     },
-    "net10.0-windows7.0/win-x64": {
-      "OpenCvSharp4.runtime.win": {
-        "type": "Direct",
-        "requested": "[4.10.0.20240616, )",
-        "resolved": "4.10.0.20240616",
-        "contentHash": "dpQNIR6PpeB/oZM0e0fZpt9lOS3Htjm6ZjtOgLyxN7QwjRekbNevrmO8VbgezUoetk68CRwxYZGaymCm2vt8Sg=="
-      }
-    }
+    "net10.0-windows7.0/win-x64": {}
   }
 }

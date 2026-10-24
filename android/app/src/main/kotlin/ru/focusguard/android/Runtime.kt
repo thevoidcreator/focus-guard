@@ -12,15 +12,30 @@ import ru.focusguard.core.*
 class GuardRuntime(private val ctx: Context) {
     fun update(event: String = "tick", transition: (State) -> State = { it }): State = synchronized(Storage.lock) {
         val store = Storage(ctx)
-        var s = Engine.tick(store.read(), store.reading())
+        val reading = store.reading()
+        var s = store.read()
+        if (s.daily != null) {
+            val d = s.daily!!
+            val charge = if (s.activated) runCatching { UsageMonitor.charging(ctx, s) }.getOrDefault(true) else false
+            val next = DailyEngine.tick(d, reading, charge).let { if (d.boot != reading.boot) it.copy(unlimited = false) else it }
+            val open = UsageMonitor.ready(ctx) && (next.remaining > 0 || next.unlimited && next.time(reading) != null)
+            s = s.copy(daily = next, mode = if (open) Mode.SESSION_ACTIVE else Mode.LOCKED, sessionDeadline = 0)
+        } else s = Engine.tick(s, reading)
         s = transition(s)
+        if (s.daily != null) {
+            val d = s.daily!!
+            val open = UsageMonitor.ready(ctx) && (d.remaining > 0 || d.unlimited && d.time(reading) != null)
+            s = s.copy(mode = if (open) Mode.SESSION_ACTIVE else Mode.LOCKED)
+        }
         store.write(s) // Durable state before any relaxation of OS policy.
         if (event != "tick") store.audit(event)
         try {
             schedule(s)
             val controller = PolicyController(ctx)
             if (s.removal == Removal.DEPROVISIONING) s = controller.deprovision(s, store::write)
-            else controller.reconcile(s)
+            else if (s.daily == null || event != "tick" || lastMode != s.mode || reading.mono - lastReconcile > 10_000) {
+                controller.reconcile(s); lastMode = s.mode; lastReconcile = reading.mono
+            }
             if (s.error.isNotEmpty()) { s = s.copy(error = ""); store.write(s) }
         } catch (e: Exception) {
             s = store.read()
@@ -44,12 +59,13 @@ class GuardRuntime(private val ctx: Context) {
         if (!s.activated || s.removal == Removal.COMPLETE) { alarm.cancel(checkpoint); alarm.cancel(deadline); return }
         // Checkpoints must not consume the allow-while-idle quota needed for the deadline.
         alarm.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + MINUTE, checkpoint)
-        if (s.mode == Mode.SESSION_ACTIVE) {
+        if (s.daily == null && s.mode == Mode.SESSION_ACTIVE) {
             check(alarm.canScheduleExactAlarms()) { "ОС не разрешила точный таймер; сеанс закрыт" }
             alarm.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, s.sessionDeadline, deadline)
         }
         else alarm.cancel(deadline)
     }
+    companion object { private var lastMode: Mode? = null; private var lastReconcile = -1L }
 }
 class AdminReceiver : DeviceAdminReceiver()
 class TickReceiver : BroadcastReceiver() {
@@ -57,7 +73,10 @@ class TickReceiver : BroadcastReceiver() {
         if (intent.action !in listOf("${context.packageName}.TICK", Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_LOCKED_BOOT_COMPLETED, Intent.ACTION_TIME_CHANGED, Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED)) return
         val pending = goAsync()
         Thread {
-            try { runCatching { GuardRuntime(context).update() }.onFailure { runCatching { PolicyController(context).failClosed() }; Storage(context).audit("STATE_ERROR ${it.javaClass.simpleName}") } }
+            try { runCatching {
+                val s = GuardRuntime(context).update()
+                if (s.daily != null && s.activated && s.removal != Removal.COMPLETE) context.startForegroundService(Intent(context, BudgetService::class.java))
+            }.onFailure { runCatching { PolicyController(context).failClosed() }; Storage(context).audit("STATE_ERROR ${it.javaClass.simpleName}") } }
             finally { pending.finish() }
         }.start()
     }

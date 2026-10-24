@@ -3,20 +3,28 @@
     <!-- A sideloaded Device Owner must inventory all user packages to suspend and restore them. -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <queries><package android:name="com.whatsapp" /></queries>
     <application android:label="Focus Guard" android:icon="@drawable/guard_icon" android:theme="@android:style/Theme.Material.Light.NoActionBar"
         android:allowBackup="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/extraction"
         android:supportsRtl="true" android:usesCleartextTraffic="false">
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.files" android:exported="false" android:grantUriPermissions="true"><meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/transfer_paths" /></provider>
+        <service android:name=".PlaybackAccess" android:label="Focus Guard — учёт фонового воспроизведения" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:exported="true"><intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter></service>
+        <service android:name=".BudgetService" android:exported="false" android:foregroundServiceType="specialUse"><property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Device-owner daily app and background media budget enforcement" /></service>
         <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask" android:lockTaskMode="if_whitelisted">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.HOME" /><category android:name="android.intent.category.DEFAULT" /></intent-filter>
+            <intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><data android:scheme="content" /><data android:mimeType="application/json" /><data android:mimeType="application/octet-stream" /></intent-filter>
+            <intent-filter><action android:name="android.intent.action.SEND" /><category android:name="android.intent.category.DEFAULT" /><data android:mimeType="application/json" /><data android:mimeType="application/octet-stream" /></intent-filter>
         </activity>
-        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity" android:exported="false" />
         <receiver android:name=".AdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN" android:exported="true">
             <meta-data android:name="android.app.device_admin" android:resource="@xml/admin" />
             <intent-filter><action android:name="android.app.action.DEVICE_ADMIN_ENABLED" /></intent-filter>

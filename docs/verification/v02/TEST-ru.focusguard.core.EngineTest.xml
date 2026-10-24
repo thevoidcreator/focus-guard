@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.focusguard.core.EngineTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:51:41.280Z" hostname="cd1d40bdf193" time="0.189">
+  <properties/>
+  <testcase name="cancelFlowRejectsScreenshotsAndDoesNotOpenApps()" classname="ru.focusguard.core.EngineTest" time="0.038"/>
+  <testcase name="enrollmentIsClosedAfterActivationAndRoleIsIndependent()" classname="ru.focusguard.core.EngineTest" time="0.011"/>
+  <testcase name="policyChangeUsesDelayAndBindsProposal()" classname="ru.focusguard.core.EngineTest" time="0.014"/>
+  <testcase name="dateRecoveryRequiresContinuousDayAndAutomaticTime()" classname="ru.focusguard.core.EngineTest" time="0.001"/>
+  <testcase name="emergencyRoleAndMissingKey()" classname="ru.focusguard.core.EngineTest" time="0.012"/>
+  <testcase name="midnightAndTwelveHoursDoNotGrantSecondSession()" classname="ru.focusguard.core.EngineTest" time="0.002"/>
+  <testcase name="signedFieldSubstitutionAndCriticalHeaderRejected()" classname="ru.focusguard.core.EngineTest" time="0.023"/>
+  <testcase name="wallClockJumpDoesNotShortenWaiting()" classname="ru.focusguard.core.EngineTest" time="0.005"/>
+  <testcase name="rebootBurnsAndInvalidatesAndUntrustsDate()" classname="ru.focusguard.core.EngineTest" time="0.002"/>
+  <testcase name="pauseCancellationDoesNotConsume()" classname="ru.focusguard.core.EngineTest" time="0.001"/>
+  <testcase name="rollbackAndDstRespectAccountZone()" classname="ru.focusguard.core.EngineTest" time="0.003"/>
+  <testcase name="powerOffNeverCountsWaitingAndCancelInvalidates()" classname="ru.focusguard.core.EngineTest" time="0.006"/>
+  <testcase name="expiryDeviceDigestAndParallelResponses()" classname="ru.focusguard.core.EngineTest" time="0.009"/>
+  <testcase name="screenOffExpiresAndEarlyEndBurnsDay()" classname="ru.focusguard.core.EngineTest" time="0.001"/>
+  <testcase name="completeFlowFreshFinalSameKeyReplayRejected()" classname="ru.focusguard.core.EngineTest" time="0.013"/>
+  <testcase name="strictProtocol()" classname="ru.focusguard.core.EngineTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
