@@ -1,0 +1,39 @@
+{
+  "version": "0.3.0",
+  "sourceCommit": "6c0ffe10d9058be87fc7ade09cf33ad479e8b60d",
+  "sourceBranch": "codex/android-companion",
+  "status": "LAB_BUILD_NOT_HARDWARE_ACCEPTED",
+  "tests": {
+    "windowsBuild": "PASS",
+    "androidBuild": "PASS",
+    "androidLintErrors": 0,
+    "dotnetTestsPassed": 11,
+    "kotlinTests": "33 existing passing tests, unchanged core, Gradle UP-TO-DATE",
+    "liveWindowsUI": "NOT_RUN",
+    "liveWhatsAppClipboard": "NOT_RUN"
+  },
+  "guardianMinSdk": 30,
+  "phoneMinSdk": 31,
+  "artifacts": [
+    {
+      "file": "FocusGuard-0.3-Windows-win-x64.zip",
+      "bytes": 63486055,
+      "sha256": "b3214fd877dc74c311ad02158f51cf9299840ca1fdd711ee62374db170eded14"
+    },
+    {
+      "file": "FocusGuard-0.3-guardian-android11.apk",
+      "bytes": 27769629,
+      "sha256": "6f7ea403833df6686b8a704e8617b1e3db7f05405af4b0d8518e5d72344b436a"
+    },
+    {
+      "file": "FocusGuard-0.3-phone-lab.apk",
+      "bytes": 27852909,
+      "sha256": "6d87407fe7098690a09346a52561ceca52916c139980b5c88f88cec3b360965a"
+    },
+    {
+      "file": "FocusGuard-0.3-source.zip",
+      "bytes": 235760,
+      "sha256": "e2e69db799850c6ac08a86aafb547067440556018c6e944893251faa18f99f96"
+    }
+  ]
+}
