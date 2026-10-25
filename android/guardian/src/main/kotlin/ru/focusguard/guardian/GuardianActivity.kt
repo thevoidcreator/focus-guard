@@ -63,7 +63,12 @@ class GuardianActivity : ComponentActivity() {
         input = Protocol.readStream(requireNotNull(contentResolver.openInputStream(uri)))
         output = ""; error = ""
     }.onFailure { error = "Не удалось открыть файл: ${it.message}" } }
-    private fun accept(intent: Intent?) { (intent?.data ?: intent?.let { androidx.core.content.IntentCompat.getParcelableExtra(it, Intent.EXTRA_STREAM, Uri::class.java) })?.let(::load) }
+    private fun accept(intent: Intent?) { (intent?.data ?: intent?.let { androidx.core.content.IntentCompat.getParcelableExtra(it, Intent.EXTRA_STREAM, Uri::class.java) } ?: intent?.clipData?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.uri)?.let(::load)
+        if (intent?.data == null && intent?.getStringExtra(Intent.EXTRA_TEXT) != null) {
+            val code = intent.getStringExtra(Intent.EXTRA_TEXT)!!.trim()
+            if (code.toByteArray().size <= Protocol.MAX_INPUT) { input = code; output = ""; error = "" }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState); accept(intent); setContent { MaterialTheme { Surface { Screen() } } } }
     override fun onNewIntent(intent: Intent) { super.onNewIntent(intent); setIntent(intent); accept(intent) }
     private fun validate(token: String): Approval {
@@ -76,10 +81,7 @@ class GuardianActivity : ComponentActivity() {
         return m
     }
     private fun share(text: String) {
-        val file = File(File(cacheDir, "public-transfer").apply { mkdirs() }, "FocusGuard-${java.util.UUID.randomUUID()}.fg2.json").apply { writeText(text) }
-        val uri = FileProvider.getUriForFile(this, "$packageName.files", file)
-        val send = Intent(Intent.ACTION_SEND).setType("application/json").setPackage("com.whatsapp")
-            .putExtra(Intent.EXTRA_STREAM, uri).apply { clipData = ClipData.newRawUri("Focus Guard", uri) }.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        val send = Intent(Intent.ACTION_SEND).setType("text/plain").setPackage("com.whatsapp").putExtra(Intent.EXTRA_TEXT, text)
         require(send.resolveActivity(packageManager) != null) { "Установите WhatsApp" }; startActivity(send)
     }
     @Composable fun Screen() {
@@ -90,7 +92,13 @@ class GuardianActivity : ComponentActivity() {
             Text("Вы разрешаете дополнительное время или снятие защиты на связанном телефоне. Приложение не ограничивает ваш телефон.")
             if (error.isNotEmpty()) Text(error)
             Button(onClick = { runCatching { publicKey(); share(buildJsonObject { put("version", 2); put("kind", "guardian-invite"); put("publicSpki", publicKey()) }.toString()) }.onFailure { error = it.message ?: "Ошибка" } }) { Text("Отправить приглашение через WhatsApp") }
-            Button(onClick = { picker.launch(arrayOf("application/json", "application/octet-stream", "text/plain")) }) { Text("Открыть запрос из WhatsApp") }
+            Button(onClick = { runCatching {
+                val c = getSystemService(android.content.ClipboardManager::class.java)
+                val code = c.primaryClip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.coerceToText(this@GuardianActivity)?.toString()?.trim().orEmpty()
+                require(code.isNotEmpty()) { "Сначала скопируйте запрос из мессенджера" }
+                Protocol.strictJson(code); input = code; output = ""; error = ""
+            }.onFailure { error = it.message ?: "Не удалось вставить запрос" } }) { Text("Вставить запрос") }
+            Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text("Открыть запрос из WhatsApp") }
             if (input.isNotEmpty() && request == null) {
                 Text("Запрос не прошёл проверку")
                 Button(onClick = { runCatching { validate(CompanionProtocol.readFile(input)) }.onFailure { error = it.message ?: "Некорректный файл" } }) { Text("Показать причину") }
@@ -112,6 +120,7 @@ class GuardianActivity : ComponentActivity() {
                 }) { Text("Разрешить — подтвердить PIN-кодом телефона") }
                 OutlinedButton(onClick = { input = ""; output = ""; error = "Запрос отклонён. Разрешение не выдано." }) { Text("Отказать") }
             }
+            if (output.isNotEmpty()) Button(onClick = { getSystemService(android.content.ClipboardManager::class.java).setPrimaryClip(ClipData.newPlainText("Focus Guard", output)); error = "Подтверждение скопировано. Отправьте текст обратно." }) { Text("Скопировать подтверждение") }
             if (output.isNotEmpty()) Button(onClick = { runCatching { share(output) }.onFailure { error = it.message ?: "Не удалось отправить" } }) { Text("Отправить подтверждение через WhatsApp") }
             Text("Не удаляйте это приложение без переноса доверия: его переустановка создаст другую идентичность. При потере телефона владелец сможет заменить вас своим USB-ключом после 48 часов.")
         }

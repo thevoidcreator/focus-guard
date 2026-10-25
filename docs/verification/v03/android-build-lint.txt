@@ -1,0 +1,159 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
+w: file:///workspace/focus-guard/android/app/build.gradle.kts:12:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Configure project :guardian
+w: file:///workspace/focus-guard/android/guardian/build.gradle.kts:7:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preLabDebugBuild UP-TO-DATE
+> Task :app:mergeLabDebugNativeDebugMetadata NO-SOURCE
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin UP-TO-DATE
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateLabDebugBuildConfig
+> Task :app:checkLabDebugAarMetadata UP-TO-DATE
+> Task :app:processLabDebugNavigationResources UP-TO-DATE
+> Task :app:compileLabDebugNavigationResources UP-TO-DATE
+> Task :app:generateLabDebugResValues UP-TO-DATE
+> Task :app:mapLabDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateLabDebugResources UP-TO-DATE
+> Task :app:mergeLabDebugResources UP-TO-DATE
+> Task :app:packageLabDebugResources UP-TO-DATE
+> Task :app:parseLabDebugLocalResources UP-TO-DATE
+> Task :app:createLabDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksLabDebug UP-TO-DATE
+> Task :app:processLabDebugMainManifest
+> Task :app:processLabDebugManifest
+> Task :app:javaPreCompileLabDebug UP-TO-DATE
+> Task :app:mergeLabDebugShaders UP-TO-DATE
+> Task :app:compileLabDebugShaders NO-SOURCE
+> Task :app:generateLabDebugAssets UP-TO-DATE
+> Task :app:mergeLabDebugAssets UP-TO-DATE
+> Task :app:compressLabDebugAssets UP-TO-DATE
+> Task :app:l8DexDesugarLibLabDebug UP-TO-DATE
+> Task :app:checkLabDebugDuplicateClasses UP-TO-DATE
+> Task :app:processLabDebugManifestForPackage
+> Task :app:desugarLabDebugFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexLabDebug UP-TO-DATE
+> Task :app:mergeLibDexLabDebug UP-TO-DATE
+> Task :app:mergeLabDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeLabDebugNativeLibs UP-TO-DATE
+> Task :app:stripLabDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningLabDebug UP-TO-DATE
+> Task :app:writeLabDebugAppMetadata UP-TO-DATE
+> Task :app:writeLabDebugSigningConfigVersions UP-TO-DATE
+> Task :guardian:preBuild UP-TO-DATE
+> Task :guardian:preDebugBuild UP-TO-DATE
+> Task :guardian:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :guardian:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:processLabDebugResources
+> Task :guardian:checkDebugAarMetadata UP-TO-DATE
+> Task :guardian:processDebugNavigationResources UP-TO-DATE
+> Task :guardian:compileDebugNavigationResources UP-TO-DATE
+> Task :guardian:generateDebugResValues UP-TO-DATE
+> Task :guardian:mapDebugSourceSetPaths UP-TO-DATE
+> Task :guardian:generateDebugResources UP-TO-DATE
+> Task :guardian:mergeDebugResources UP-TO-DATE
+> Task :guardian:packageDebugResources UP-TO-DATE
+> Task :guardian:parseDebugLocalResources UP-TO-DATE
+> Task :guardian:createDebugCompatibleScreenManifests
+> Task :guardian:extractDeepLinksDebug UP-TO-DATE
+> Task :guardian:processDebugMainManifest
+> Task :guardian:processDebugManifest
+> Task :guardian:javaPreCompileDebug UP-TO-DATE
+> Task :guardian:mergeDebugShaders UP-TO-DATE
+> Task :guardian:compileDebugShaders NO-SOURCE
+> Task :guardian:processDebugManifestForPackage
+> Task :guardian:generateDebugAssets UP-TO-DATE
+> Task :guardian:mergeDebugAssets UP-TO-DATE
+> Task :guardian:compressDebugAssets UP-TO-DATE
+> Task :guardian:l8DexDesugarLibDebug UP-TO-DATE
+> Task :guardian:desugarDebugFileDependencies UP-TO-DATE
+> Task :guardian:checkDebugDuplicateClasses UP-TO-DATE
+> Task :guardian:mergeExtDexDebug UP-TO-DATE
+> Task :guardian:mergeLibDexDebug UP-TO-DATE
+> Task :guardian:mergeDebugJniLibFolders UP-TO-DATE
+> Task :guardian:mergeDebugNativeLibs UP-TO-DATE
+> Task :guardian:stripDebugDebugSymbols UP-TO-DATE
+> Task :guardian:validateSigningDebug UP-TO-DATE
+> Task :guardian:writeDebugAppMetadata UP-TO-DATE
+> Task :guardian:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:preLabDebugAndroidTestBuild SKIPPED
+> Task :app:generateLabDebugAndroidTestResValues UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:preLabDebugUnitTestBuild UP-TO-DATE
+> Task :guardian:preDebugAndroidTestBuild SKIPPED
+> Task :guardian:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :guardian:extractProguardFiles UP-TO-DATE
+> Task :guardian:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:compileTestKotlin UP-TO-DATE
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:processTestResources NO-SOURCE
+> Task :core:testClasses UP-TO-DATE
+> Task :core:test UP-TO-DATE
+> Task :guardian:processDebugResources
+
+> Task :guardian:compileDebugKotlin
+w: file:///workspace/focus-guard/android/guardian/src/main/kotlin/ru/focusguard/guardian/GuardianActivity.kt:117:84 'fun createConfirmDeviceCredentialIntent(p0: CharSequence!, p1: CharSequence!): Intent!' is deprecated. Deprecated in Java.
+
+> Task :guardian:compileDebugJavaWithJavac NO-SOURCE
+> Task :guardian:dexBuilderDebug
+> Task :guardian:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :guardian:processDebugJavaRes UP-TO-DATE
+> Task :guardian:mergeDebugJavaResource UP-TO-DATE
+> Task :guardian:bundleDebugClassesToCompileJar
+> Task :guardian:generateDebugLintReportModel
+> Task :guardian:mergeProjectDexDebug
+> Task :guardian:generateDebugAndroidTestLintModel
+> Task :guardian:generateDebugUnitTestLintModel
+> Task :guardian:packageDebug
+> Task :guardian:createDebugApkListingFileRedirect
+> Task :guardian:assembleDebug
+
+> Task :guardian:lintAnalyzeDebugAndroidTest
+Warning: Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
+
+> Task :guardian:lintAnalyzeDebugUnitTest
+
+> Task :app:compileLabDebugKotlin
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/PolicyController.kt:31:21 'static field DISALLOW_ADD_MANAGED_PROFILE: String' is deprecated. Deprecated in Java.
+w: file:///workspace/focus-guard/android/app/src/main/kotlin/ru/focusguard/android/UsageMonitor.kt:24:95 'fun unsafeCheckOpNoThrow(p0: String, p1: Int, p2: String): Int' is deprecated. Deprecated in Java.
+
+> Task :app:compileLabDebugJavaWithJavac
+> Task :app:dexBuilderLabDebug
+> Task :app:mergeLabDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processLabDebugJavaRes UP-TO-DATE
+> Task :app:mergeLabDebugJavaResource UP-TO-DATE
+> Task :app:bundleLabDebugClassesToCompileJar
+> Task :app:generateLabDebugLintReportModel
+> Task :app:mergeProjectDexLabDebug
+> Task :app:generateLabDebugAndroidTestLintModel
+> Task :app:generateLabDebugUnitTestLintModel
+> Task :app:packageLabDebug
+> Task :app:createLabDebugApkListingFileRedirect
+> Task :app:assembleLabDebug
+> Task :guardian:lintAnalyzeDebug
+> Task :app:lintAnalyzeLabDebugAndroidTest
+> Task :app:lintAnalyzeLabDebugUnitTest
+
+> Task :guardian:lintReportDebug
+Wrote HTML report to file:///workspace/focus-guard/android/guardian/build/reports/lint-results-debug.html
+
+> Task :guardian:lintDebug
+> Task :app:lintAnalyzeLabDebug
+
+> Task :app:lintReportLabDebug
+Wrote HTML report to file:///workspace/focus-guard/android/app/build/reports/lint-results-labDebug.html
+
+> Task :app:lintLabDebug
+
+BUILD SUCCESSFUL in 1m 33s
+104 actionable tasks: 40 executed, 64 up-to-date

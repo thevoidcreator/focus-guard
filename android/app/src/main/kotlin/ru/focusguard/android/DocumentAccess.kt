@@ -11,7 +11,7 @@ object DocumentAccess {
     @Synchronized fun active(): Set<String> = if (SystemClock.elapsedRealtime() < until) packages else emptySet()
     fun open(ctx: Context) {
         val handlers = listOf(Intent.ACTION_OPEN_DOCUMENT, Intent.ACTION_CREATE_DOCUMENT).flatMap { action ->
-            ctx.packageManager.queryIntentActivities(Intent(action).setType("application/json").addCategory(Intent.CATEGORY_OPENABLE), android.content.pm.PackageManager.MATCH_SYSTEM_ONLY)
+            ctx.packageManager.queryIntentActivities(Intent(action).setType("*/*").addCategory(Intent.CATEGORY_OPENABLE), android.content.pm.PackageManager.MATCH_SYSTEM_ONLY)
                 .map { it.activityInfo.packageName }
         }.toSet()
         synchronized(this) { packages = handlers; until = SystemClock.elapsedRealtime() + 120_000 }

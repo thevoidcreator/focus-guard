@@ -1,26 +1,7 @@
-<Window x:Class="FocusGuard.ConsoleApp.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Focus Guard — Восстановление" Width="950" Height="830" MinWidth="720" MinHeight="650" Background="#F4F6F8">
-<ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel Margin="28">
-<TextBlock Text="Focus Guard · Восстановление" FontSize="28" FontWeight="Bold"/>
-<TextBlock Text="Эта программа нужна только для вашей запасной USB-флешки. Дополнительное время подтверждается доверенным человеком в WhatsApp." Margin="0,12"/>
-<TextBlock Text="1. Подключите свою флешку" FontSize="20" FontWeight="SemiBold"/>
-<DockPanel><Button Content="Обновить список" DockPanel.Dock="Right" Click="Refresh"/><ComboBox x:Name="Drives" SelectionChanged="DriveChanged" Margin="4"/></DockPanel>
-<TextBlock Text="Существующий ключ:"/><ComboBox x:Name="Keys" SelectionChanged="KeyChanged" Margin="4"/>
-<Expander Header="На флешке ещё нет ключа? Создать новый" Margin="0,12"><StackPanel>
-<TextBlock Text="Флешка не форматируется. Старые ключи не перезаписываются. Пароль — не менее 12 символов."/>
-<TextBlock Text="Повторите пароль:"/><PasswordBox x:Name="RepeatPassword" Margin="4" Padding="8"/>
-<Button Content="Создать ключ восстановления" Click="CreateKey"/>
-</StackPanel></Expander>
-<TextBlock Text="Пароль флешки (вводится заново для каждой операции):"/><PasswordBox x:Name="Password" Margin="4" Padding="8"/>
-<WrapPanel><Button Content="Проверить флешку" Click="VerifyKey"/><Button Content="Сохранить публичный файл для телефона" Click="ExportPublic"/></WrapPanel>
-<TextBlock x:Name="KeyDetails" FontFamily="Consolas" Margin="0,10"/>
-<TextBlock Text="2. Откройте запрос с телефона" FontSize="20" FontWeight="SemiBold" Margin="0,16,0,8"/>
-<TextBlock Text="В Focus Guard выберите замену доверенного человека или удаление, затем «Сохранить запрос для ПК». Перенесите файл на компьютер и откройте здесь. 48 часов проверяет телефон через интернет; часы компьютера не ускоряют ожидание."/>
-<Button Content="Открыть файл запроса" Click="OpenRequest"/>
-<TextBlock x:Name="RequestDetails" Margin="0,12" FontSize="16"/>
-<CheckBox x:Name="Confirm" Content="Сверил телефон и действие. Хочу подтвердить именно этот запрос." Margin="4,10"/>
-<TextBlock Text="3. Подтвердите и передайте ответ телефону" FontSize="20" FontWeight="SemiBold" Margin="0,12"/>
-<Button Content="Подтвердить флешкой и сохранить ответ" Click="Approve"/>
-<TextBlock x:Name="Status" Foreground="#853000" FontWeight="SemiBold" Margin="0,16"/>
-<Expander Header="Как пользоваться запасным выходом"><TextBlock Text="Сначала подпишите начало ожидания и примените ответ на телефоне. Через 48 календарных часов создайте на телефоне новый запрос завершения и подтвердите той же флешкой. При замене после этого свяжите новый доверенный телефон. При удалении Focus Guard сначала снимет управление Android. Не стирайте и не пересоздавайте существующий ключ."/></Expander>
-<TextBlock Text="Версия 0.2 · лабораторная сборка. Проверяйте снятие управления только на отдельном тестовом телефоне." Margin="0,18"/>
-</StackPanel></ScrollViewer></Window>
+<Window x:Class="FocusGuard.ConsoleApp.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Focus Guard — Восстановление" Width="1040" Height="820" MinWidth="780" MinHeight="650" Background="{DynamicResource Bg}" Foreground="{DynamicResource Ink}">
+<Grid Margin="32"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+<DockPanel Margin="0,0,0,24"><Button x:Name="Theme" DockPanel.Dock="Right" Click="ToggleTheme"/><TextBlock Text="Focus Guard" FontSize="27" FontWeight="Bold" VerticalAlignment="Center"/></DockPanel>
+<StackPanel Grid.Row="1" Margin="0,0,0,16"><TextBlock x:Name="Progress" Foreground="{DynamicResource Accent}"/><TextBlock x:Name="Heading" FontSize="30" FontWeight="SemiBold" Margin="0,8"/><TextBlock x:Name="Description" Foreground="{DynamicResource Muted}" FontSize="16"/></StackPanel>
+<ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto"><StackPanel x:Name="Body" Margin="0,0,12,12"/></ScrollViewer>
+<StackPanel Grid.Row="3"><TextBlock x:Name="Status" Foreground="{DynamicResource Accent}" Margin="0,10"/><DockPanel><Button x:Name="NextButton" DockPanel.Dock="Right" Background="{DynamicResource Accent}" Foreground="{DynamicResource ButtonInk}" Click="Next" MinWidth="210"/><Button x:Name="BackButton" DockPanel.Dock="Left" Content="Назад" Click="Back"/><TextBlock Text="0.3 · тестовая версия" Foreground="{DynamicResource Muted}" HorizontalAlignment="Center" VerticalAlignment="Center"/></DockPanel></StackPanel>
+</Grid></Window>

@@ -1,7 +1,7 @@
 plugins { id("com.android.application"); kotlin("android"); kotlin("plugin.serialization"); id("org.jetbrains.kotlin.plugin.compose") }
 android {
     namespace = "ru.focusguard.android"; compileSdk = 36; buildToolsVersion = "36.0.0"
-    defaultConfig { applicationId = "ru.focusguard.android"; minSdk = 31; targetSdk = 36; versionCode = 2; versionName = "0.2.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+    defaultConfig { applicationId = "ru.focusguard.android"; minSdk = 31; targetSdk = 36; versionCode = 5; versionName = "0.3.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     flavorDimensions += "environment"
     productFlavors {
         create("lab") { dimension = "environment"; applicationIdSuffix = ".lab"; buildConfigField("boolean", "LAB_DEVICE", "true") }

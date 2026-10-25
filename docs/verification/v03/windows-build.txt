@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored /workspace/focus-guard/windows/FocusGuard.Core/FocusGuard.Core.csproj (in 567 ms).
+  1 of 2 projects are up-to-date for restore.
+  FocusGuard.Core -> /workspace/focus-guard/windows/FocusGuard.Core/bin/Release/net10.0/win-x64/FocusGuard.Core.dll
+  FocusGuard.Console -> /workspace/focus-guard/windows/FocusGuard.Console/bin/Release/net10.0-windows/win-x64/FocusGuard.KeyConsole.dll
+  FocusGuard.Console -> /workspace/focus-guard/dist/windows-v03/

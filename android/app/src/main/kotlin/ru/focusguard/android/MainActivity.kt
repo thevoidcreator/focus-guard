@@ -33,8 +33,9 @@ class MainActivity : ComponentActivity() {
     }
     override fun onNewIntent(intent: Intent) { super.onNewIntent(intent); setIntent(intent); accept(intent) }
     private fun accept(intent: Intent?) {
-        val uri = intent?.data ?: intent?.let { androidx.core.content.IntentCompat.getParcelableExtra(it, Intent.EXTRA_STREAM, Uri::class.java) }
+        val uri = intent?.data ?: intent?.let { androidx.core.content.IntentCompat.getParcelableExtra(it, Intent.EXTRA_STREAM, Uri::class.java) } ?: intent?.clipData?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.uri
         if (uri != null) runCatching { incoming = Transfer.read(this, uri) }.onFailure { incoming = "Ошибка файла: ${it.message}" }
+        else intent?.getStringExtra(Intent.EXTRA_TEXT)?.let { if (it.toByteArray().size <= Protocol.MAX_INPUT) incoming = it.trim() }
     }
     override fun onResume() {
         super.onResume()
@@ -105,7 +106,7 @@ class MainActivity : ComponentActivity() {
         }
         Column(Modifier.fillMaxSize().safeDrawingPadding().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("Focus Guard", style = MaterialTheme.typography.headlineLarge)
-            Text("0.2 • тестовая версия • день начинается в 04:00 МСК")
+            Text("0.3 • тестовая версия • день начинается в 04:00 МСК")
             if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
             if (error.isNotEmpty()) Text(error, color = MaterialTheme.colorScheme.error)
             val s = state
@@ -126,7 +127,7 @@ class MainActivity : ComponentActivity() {
                         DocumentAccess.open(this@MainActivity); exporter.launch("focusguard-request.fgreq")
                     }) { Text("Сохранить запрос для Windows 0.1") }
                 }
-                Button(onClick = { DocumentAccess.open(this@MainActivity); picker.launch(arrayOf("application/octet-stream", "application/json", "text/plain")) }) { Text("Открыть прежний подписанный ответ") }
+                Button(onClick = { DocumentAccess.open(this@MainActivity); picker.launch(arrayOf("*/*")) }) { Text("Открыть прежний подписанный ответ") }
                 if (text.isNotEmpty()) Button(enabled = !busy, onClick = { change("legacy_response") { Engine.applyResponse(it, text.trim()) } }) { Text("Применить прежний ответ") }
                 if (s.removal == Removal.DEPROVISIONING) Button(enabled = !busy, onClick = { change("legacy_retry") { it } }) { Text("Повторить снятие управления") }
                 if (s.removal == Removal.COMPLETE) Button(onClick = { startActivity(Intent(Intent.ACTION_DELETE, Uri.parse("package:$packageName"))) }) { Text("Управление снято — удалить старую установку") }
@@ -160,7 +161,7 @@ class MainActivity : ComponentActivity() {
                     }.onFailure { error = it.message ?: "Неверные настройки" }
                 }) { Text(if (s.activated) "Сохранить или запросить подтверждение" else "Сохранить настройки") }
             }
-            if (!s.activated || d.replacementAllowed) {
+            if ((!s.activated && d.guardian.isEmpty()) || d.replacementAllowed) {
                 Text("Импортируйте приглашение из приложения доверенного человека ниже.")
                 val guardian = runCatching { Protocol.strictJson(text); val obj = Protocol.json.parseToJsonElement(text).jsonObject; require(obj["kind"]?.jsonPrimitive?.content == "guardian-invite"); obj.getValue("publicSpki").jsonPrimitive.content.also { Protocol.publicKey(it) } }.getOrNull()
                 if (guardian != null) {
@@ -218,12 +219,20 @@ class MainActivity : ComponentActivity() {
             if (d.pending.isNotEmpty()) {
                 val msg = CompanionProtocol.inspect(d.pending)
                 Text("Готов запрос: ${CompanionProtocol.label(msg)}. Для доверенного человека — WhatsApp; для флешки — файл на ПК.")
+                Button(onClick = { Transfer.copy(this@MainActivity, CompanionProtocol.file(d.pending)); error = "Запрос скопирован. Отправьте текст в мессенджере." }) { Text("Скопировать запрос") }
                 Button(enabled = !busy, onClick = { runCatching { Transfer.share(this@MainActivity, CompanionProtocol.file(d.pending)) }.onFailure { error = it.message ?: "Не удалось отправить" } }) { Text("Отправить запрос через WhatsApp") }
                 Button(onClick = { exportContent = CompanionProtocol.file(d.pending); DocumentAccess.open(this@MainActivity); exporter.launch("FocusGuard-request.fg2.json") }) { Text("Сохранить запрос для ПК") }
                 Button(onClick = { change("cancel_request") { it.copy(daily = it.daily!!.copy(pending = "")) } }) { Text("Отменить этот запрос") }
             }
             if (text.isNotEmpty()) Text("Получен файл. Приглашение или публичный ключ показываются в настройке выше. Для подписанного ответа нажмите «Применить подтверждение».")
-            Button(onClick = { DocumentAccess.open(this@MainActivity); picker.launch(arrayOf("application/json", "application/octet-stream", "text/plain")) }) { Text("Открыть полученный файл") }
+            Button(onClick = { runCatching {
+                val clipboard = getSystemService(android.content.ClipboardManager::class.java)
+                val code = clipboard.primaryClip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.coerceToText(this@MainActivity)?.toString()?.trim().orEmpty()
+                require(code.isNotEmpty()) { "Сначала скопируйте код из мессенджера" }
+                Protocol.strictJson(code); text = code; phraseAck = false
+                error = "Код вставлен. Для приглашения продолжите настройку выше. Для ответа нажмите «Применить подтверждение»."
+            }.onFailure { error = it.message ?: "Не удалось вставить код" } }) { Text("Вставить код") }
+            Button(onClick = { DocumentAccess.open(this@MainActivity); picker.launch(arrayOf("*/*")) }) { Text("Открыть полученный файл") }
             Button(enabled = !busy && text.isNotEmpty(), onClick = { work {
                 val token = CompanionProtocol.readFile(text)
                 val req = CompanionProtocol.inspect(token)
